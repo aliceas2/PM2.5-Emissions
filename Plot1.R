@@ -15,3 +15,7 @@ x.sums <- data.frame(c(1999,2002,2005,2008), x.sums)
 names(x.sums) <- c("Year","Sum")
 plot(x.sums, ylab="Total PM2.5")
 mtext(side=3, text="Total Emissions", line=1.2, cex=1.5)
+
+##Fit Line
+fit1 <- lm(Sum~Year, data = x.sums)
+abline(fit1, col = "red")
