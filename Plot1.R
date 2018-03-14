@@ -9,10 +9,9 @@ summary <- na.omit(readRDS("summarySCC_PM25.rds"))
 ## make a plot showing the total PM2.5 emission from all sources for:
 ## each of the years 1999, 2002, 2005, and 2008.
 
-x.sums <- by(summary, summary$year, function(x){
-        # caculate the sum of emissions, by year
-        sums <- sum(x$Emissions)}
-)
+x.sums <- tapply(summary$Emissions, summary$year, sum)
 
-plot(x.sums, xlab="Year", ylab="Total PM2.5")
+x.sums <- data.frame(c(1999,2002,2005,2008), x.sums)
+names(x.sums) <- c("Year","Sum")
+plot(x.sums, ylab="Total PM2.5")
 mtext(side=3, text="Total Emissions", line=1.2, cex=1.5)
