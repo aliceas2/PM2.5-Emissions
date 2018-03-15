@@ -1,8 +1,8 @@
 ## Fetch 
 
 ## Read in test data
-## sourceClass <- readRDS("Source_Classification_Code.rds")
-##summary <- na.omit(readRDS("summarySCC_PM25.rds"))
+sourceClass <- readRDS("Source_Classification_Code.rds")
+summary <- na.omit(readRDS("summarySCC_PM25.rds"))
 
 ##How have emissions from motor vehicle sources changed from 1999-2008 in Baltimore City?
 library(ggplot2)
