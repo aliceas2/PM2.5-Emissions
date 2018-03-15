@@ -38,3 +38,7 @@ p <- ggplot(bmoreLA, aes(x=factor(year), y=Emissions, fill=city)) +
         labs(x="Year", y=expression("Total PM"[2.5]*" Emission")) + 
         labs(title=expression("Vehicle Emissions in Baltimore City and LA County"))
 print(p)
+
+##Save Plot
+dev.copy(png,'Plot6.png')
+dev.off()

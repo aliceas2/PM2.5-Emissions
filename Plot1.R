@@ -19,3 +19,7 @@ mtext(side=3, text="Total Emissions", line=1.2, cex=1.5)
 ##Fit Line
 fit1 <- lm(Sum~Year, data = x.sums)
 abline(fit1, col = "red")
+
+##Save Plot
+dev.copy(png,'Plot1.png')
+dev.off()

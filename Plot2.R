@@ -17,3 +17,7 @@ mtext(side=3, text="Baltimore Emissions", line = 1.2, cex=1.5)
 ## Fit Line
 fit1 <- lm(Emissions~year, data = bmore)
 abline(fit1, col = "red")
+
+##Save Plot
+dev.copy(png,'Plot2.png')
+dev.off()

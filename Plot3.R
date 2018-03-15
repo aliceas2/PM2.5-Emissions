@@ -24,3 +24,7 @@ p <- ggplot(data=bmore, aes(x=year, y=Emissions, group=type, color=type))
 p <- p + geom_smooth(method='lm', se = FALSE) + geom_point( size=4, shape=20) 
 p <- p + xlab("Year") + ylab("Emissions (tons)") + ggtitle("Baltimore PM2.5 Values")
 print(p)
+
+##Save Plot
+dev.copy(png,'Plot3.png')
+dev.off()

@@ -27,3 +27,7 @@ p <- p + xlab("Year") + ylab("Emissions (tons)") + ggtitle("Coal Emissions")
 p <- p + scale_x_continuous(breaks = c(1999, 2002, 2005, 2008))
 
 print(p)
+
+##Save Plot
+dev.copy(png,'Plot4.png')
+dev.off()
