@@ -1,7 +1,6 @@
 ## Fetch 
 
 # Read in test data
-##sourceClass <- readRDS("Source_Classification_Code.rds"
 summary <- na.omit(readRDS("summarySCC_PM25.rds"))
 
 ## Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? 
